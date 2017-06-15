@@ -20,7 +20,7 @@ button {
 }
 
 
-#numbut {
+.numbut, .delete, .result {
     margin: 2px;
     border-radius: 8px;
 }

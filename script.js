@@ -1,16 +1,16 @@
 
-function addNum(value) {
+$(".numbut").on("click", function() {
     var screen = $("#screen");
     var screenHTML = $("#screen").html();
-
+    var value = $(this).text()
     screen.css("fontSize", 30);
     screen.css("fontFamily", "Cabin");
 
     if (screenHTML === "") {
-            if (value === "/" || value === "*" || value === "+" || value === ".") {
-                $("#screen").html(null)
-            } else {
-               $("#screen").html(value)
+        if (value === "/" || value === "*" || value === "+" || value === ".") {
+            $("#screen").html(null)
+        } else {
+            $("#screen").html(value)
             }
     } else {
         var validLast = checkOperator(value)
@@ -18,18 +18,21 @@ function addNum(value) {
             $("#screen").append(value)
         }
     }  
-}
+})
 
-function result() {
+
+$(".result").on("click", function () {
     var screenHTML = $("#screen").html();
     if (screenHTML !== "") {
         $("#screen").html(eval(screenHTML));
     }
-}
+})
 
-function reset() {
+
+$(".delete").on("click", function () {
     $("#screen").html(null);
-}
+})
+
 
 function checkOperator(value) {
     var operators = ["+", "-", "/", "*", "."];
@@ -46,3 +49,4 @@ function checkOperator(value) {
         return true
     }
 }
+
