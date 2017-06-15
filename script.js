@@ -1,37 +1,40 @@
 
 function addNum(value) {
-    var screen = document.getElementById("screen")
-    screen.style.fontSize = "30px"
-    screen.style.fontFamily = "Cabin"
+    var screen = $("#screen");
+    var screenHTML = $("#screen").html();
 
-    if (document.getElementById("screen").innerHTML === "") {
+    screen.css("fontSize", 30);
+    screen.css("fontFamily", "Cabin");
+
+    if (screenHTML === "") {
             if (value === "/" || value === "*" || value === "+" || value === ".") {
-                document.getElementById("screen").innerHTML = null
+                $("#screen").html(null)
             } else {
-                document.getElementById("screen").innerHTML += value
+               $("#screen").html(value)
             }
     } else {
         var validLast = checkOperator(value)
         if (validLast) {
-            document.getElementById("screen").innerHTML += value
+            $("#screen").append(value)
         }
     }  
 }
 
 function result() {
-    if (document.getElementById("screen").innerHTML !== "") {
-        document.getElementById("screen").innerHTML = eval(document.getElementById("screen").innerHTML)
+    var screenHTML = $("#screen").html();
+    if (screenHTML !== "") {
+        $("#screen").html(eval(screenHTML));
     }
 }
 
 function reset() {
-    document.getElementById("screen").innerHTML = null
+    $("#screen").html(null);
 }
 
 function checkOperator(value) {
     var operators = ["+", "-", "/", "*", "."];
     if (jQuery.inArray(value, operators) !== -1) {
-        var digits = document.getElementById("screen").innerHTML;
+        var digits = $("#screen").html();
         var lastDigit = digits[digits.length - 1];
         
         if (jQuery.inArray(lastDigit, operators) === -1) {
