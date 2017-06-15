@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>AbaGusz</h1>
+            <button id="numbut" onclick="addNum(this.value)" value="7">7</button>
+            <button id="numbut" onclick="addNum(this.value)" value="8">8</button>
+            <button id="numbut" onclick="addNum(this.value)" value="9">9</button>
+            <button id="numbut" onclick="addNum(this.value)" value="+">+</button>
+            <br>
+            <button id="numbut" onclick="addNum(this.value)" value="4">4</button>
+            <button id="numbut" onclick="addNum(this.value)" value="5">5</button>
+            <button id="numbut" onclick="addNum(this.value)" value="6">6</button>
+            <button id="numbut" onclick="addNum(this.value)" value="-">-</button>
+            <br>
+            <button id="numbut" onclick="addNum(this.value)" value="1">1</button>
+            <button id="numbut" onclick="addNum(this.value)" value="2">2</button>
+            <button id="numbut" onclick="addNum(this.value)" value="3">3</button>
+            <button id="numbut" onclick="addNum(this.value)" value="/">/</button>
+            <br>
+            <button id="numbut" onclick="addNum(this.value)" value="0">0</button>
+            <button id="numbut" onclick="reset()" value="C">C</button>
+            <button id="numbut" onclick="addNum(this.value)" value=".">.</button>
+            <button id="numbut" onclick="addNum(this.value)" value="*">*</button>
+            <br>
+            <button id="numbut" onclick="result()">=</button>
+        </div>
+        <div id="bubble">
+            <i  class="fa fa-comment-o fa-5x" aria-hidden="true" style="font-size: 20em"></i>
+        </div>
+        <div class="case">
+            <span id="screen"></span>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
