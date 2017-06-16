@@ -19,27 +19,29 @@ button {
     box-shadow: 0 4px #999;
 }
 
-
 .numbut, .delete, .result {
     margin: 2px;
     border-radius: 8px;
 }
 
-.wrapper {
-    position: relative;
-    top: 280px;
-    right: 100px;
+@media screen and (min-device-width: 1680px) {
+    .wrapper {
+        position: fixed;
+        top: 30%;
+        right: 48%;
+    }
+
+    #bubble {
+        position: fixed;
+        right: 15%;
+        bottom: 25%;
+    }
+
+    .case {
+        position: fixed;
+        width: 19em; 
+        right: 15%;
+        bottom: 41%;
+    }
 }
 
-#bubble {
-    position: fixed;
-    right: 260px;
-    bottom: 220px;
-}
-
-.case {
-    position: fixed;
-    right: 240px;
-    bottom: 360px;
-    width: 350px;
-}
