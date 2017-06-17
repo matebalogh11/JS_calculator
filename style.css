@@ -6,7 +6,6 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: 40em;
-    background-color: #bcf8d9;
 }
 
 button {
@@ -22,6 +21,12 @@ button {
 .numbut, .delete, .result {
     margin: 2px;
     border-radius: 8px;
+    position: relative;
+}
+
+.numbut:active, .delete:active, .result:active {
+    top: 2px;
+    box-shadow: 0 2px #666;
 }
 
 @media screen and (min-device-width: 1680px) {
