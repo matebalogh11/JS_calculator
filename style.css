@@ -50,3 +50,24 @@ button {
     }
 }
 
+@media screen and (max-device-width: 1400px) {
+    .wrapper {
+        position: fixed;
+        top: 23%;
+        right: 48%;
+    }
+
+    #bubble {
+        position: fixed;
+        right:  5%;
+        bottom: 15%;
+    }
+
+    .case {
+        position: fixed;
+        width: 19em; 
+        height:2rem;
+        right: 6%;
+        bottom: 37%;
+    }
+}
